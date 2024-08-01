@@ -14,9 +14,7 @@ export const createContactSchema = Joi.object({
   email: Joi.string().email().messages({
     'string.email': 'Email is not valid',
   }),
-  isFavourite: Joi.boolean()
-    .required()
-    .messages({ 'any.required': 'isFavourite is required' }),
+  isFavourite: Joi.boolean(),
   contactType: Joi.string().valid('personal', 'home'),
 });
 
